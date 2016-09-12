@@ -1,0 +1,26 @@
+{
+  "name": "eregister",
+  "version": "0.0.1",
+  "description": "eregistration system for Club Expo ",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CADemons/E-Register.git"
+  },
+  "author": "CADemons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CADemons/E-Register/issues"
+  },
+  "homepage": "https://github.com/CADemons/E-Register#readme",
+  "dependencies": {
+    "array-unique": "0.3.2",
+    "express": "4.14.0",
+    "google-auth-library": "0.9.8",
+    "googleapis": "12.4.0",
+    "jquery": "3.1.0"
+  }
+}
