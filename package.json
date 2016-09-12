@@ -18,6 +18,7 @@
   "homepage": "https://github.com/CADemons/E-Register#readme",
   "dependencies": {
     "array-unique": "0.3.2",
+    "body-parser": "1.15.2",
     "express": "4.14.0",
     "google-auth-library": "0.9.8",
     "google-spreadsheet": "2.0.3",
