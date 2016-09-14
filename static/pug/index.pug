@@ -1,0 +1,10 @@
+extends layout 
+
+block content
+    h1 Join Demons!
+    form(name="register", method="POST")
+        div.input
+            span.label Name
+            input(type="text", name="name")
+        div.actions
+            input(type="submit", value="Join!")
