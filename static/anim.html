@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Thank you!</title>
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" tyle="text/css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <script src="bower_components/particles.js/particles.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script>
+        
+        window.onload = function () {
+            particlesJS.load('particles-js', 'particlesjs-config.json', function () {
+                console.log('callback - particles.js config loaded');
+            });
+            
+            $('#signup').fadeOut();
+            $('#particles-js').fadeOut();
+            $('#signup').promise().done(function () {
+                $('#confirmation').removeClass('is-hidden');
+                $('#confirmation').toggleClass('animated fadeIn');
+            });
+            
+            window.setTimeout(
+                function () {
+                    $('.circle-loader').toggleClass('load-complete');
+                    $('.checkmark').toggle();
+                    $('#message').removeClass('is-hidden');
+                    $('#message').toggleClass('animated fadeIn');
+                    window.setTimeout(
+                        function () {
+                            window.location.href = 'index.html';
+                        }, 6000
+                    );
+                }, 3000);
+           
+        }
+    </script>
+</head>
+
+<body>
+    <section class="hero is-primary is-fullheight" style="position: relative;">
+        <div class="hero-body" style="width: 100%;height: 100%;position: absolute; top: 0;
+  left: 0; pointer-events: none;">
+            <div id="signup" class="container content is-large">
+            </div>
+            <div id="confirmation" class="container content is-large has-text-centered is-hidden">
+                <div class="circle-loader">
+                    <div class="checkmark draw"></div>
+                </div>
+                <div id="message" class="is-hidden">
+                    <h1 class="title" style="font-weight: 700; margin-bottom: 0px; margin-top: 0px">Thank You!</h1>
+                    <h2 class="subtitle" style="margin-top: 10px; margin-bottom: 30px">You will receive an email shortly regarding the next meeting time.</h2>
+                </div>
+            </div>
+        </div>
+        <div id="particles-js" style="background-image: url(" "); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; z-index: -100;"></div>
+    </section> 
+</body>
+
+
