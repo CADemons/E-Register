@@ -18,7 +18,7 @@
             <div id="signup" class="container content is-large">
                 <h1 class="title" style="font-weight: 700; margin-bottom: 0px;">DEMONs Sign Up</h1>
                 <h2 class="subtitle" style="margin-top: 10px; margin-bottom: 30px">Please enter your full name below and click submit!</h2>
-                <!-- action="register" method="post"-->
+                <!-- action="register" method="post" secluded this for development conveniences -->
                 <form class="control">
                     <input id="input" class="input is-primary is-large" style="pointer-events: auto; width:300px; box-shadow:none; border-radius: 8px;" type="text" placeholder="Name" />
                     <a id="submit" class="button is-large is-success" style="pointer-events: auto; border-radius: 8px; margin-left: 10px;" type="submit">Submit<span class="fa fa-check-circle" style="margin-left: .3em"></span></a>
@@ -45,6 +45,8 @@
     </script>
     <script>
         $('#submit').click(function () {
+            
+            // Phase One
             $('#signup').fadeOut();
             $('#particles-js').fadeOut();
             $('#signup').promise().done(function () {
@@ -52,7 +54,7 @@
                 $('#confirmation').toggleClass('animated fadeIn');
             });
             
-            // make it so that the following function only executes when the data has been sucessfully uploaded to google sheets
+            // Phase Two make it so that the following function only executes when the data has been sucessfully uploaded to google sheets
             setTimeout(
                 function () {
                     $('.circle-loader').toggleClass('load-complete');
