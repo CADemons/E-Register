@@ -51,7 +51,8 @@
                 $('#confirmation').removeClass('is-hidden');
                 $('#confirmation').toggleClass('animated fadeIn');
             });
-
+            
+            // make it so that the following function only executes when the data has been sucessfully uploaded to google sheets
             setTimeout(
                 function () {
                     $('.circle-loader').toggleClass('load-complete');
