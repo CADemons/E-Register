@@ -15,22 +15,50 @@
     <section class="hero is-primary is-fullheight" style="position: relative;">
         <div class="hero-body" style="width: 100%;height: 100%;position: absolute; top: 0;
   left: 0; pointer-events: none;">
-            <div class="container content is-large">
+            <div id="signup" class="container content is-large">
                 <h1 class="title" style="font-weight: 700; margin-bottom: 0px;">DEMONs Sign Up</h1>
                 <h2 class="subtitle" style="margin-top: 10px; margin-bottom: 30px">Please enter your full name below and click submit!</h2>
-                <form class="control" action="register" method="post">
-                    <span style="font-size: 30px; color: rgba(255, 255, 255, 0.7);">Name:</span>
-                    <input class="input is-primary is-large" style="pointer-events: auto; width:300px; box-shadow:none; border-radius: 8px;" type="text" name="first last" />
-                    <button class="button is-large is-success" style="pointer-events: auto; border-radius: 8px; margin-left: 10px;" type="submit">Submit<span class="fa fa-check-circle" style="margin-left: .3em"></span></button>
+                <!-- action="register" method="post"-->
+                <form class="control">
+                    <input id="input" class="input is-primary is-large" style="pointer-events: auto; width:300px; box-shadow:none; border-radius: 8px;" type="text" placeholder="Name" />
+                    <a id="submit" class="button is-large is-success" style="pointer-events: auto; border-radius: 8px; margin-left: 10px;" type="submit">Submit<span class="fa fa-check-circle" style="margin-left: .3em"></span></a>
                 </form>
+            </div>
+            <div id="confirmation" class="container content is-large has-text-centered is-hidden">
+                <div class="circle-loader">
+                    <div class="checkmark draw"></div>
+                </div>
+                <div id="message" class="is-hidden">
+                    <h1 class="title" style="font-weight: 700; margin-bottom: 0px; margin-top: 0px">Thank You, </h1>
+                    <h2 class="subtitle" style="margin-top: 10px; margin-bottom: 30px">You will receive an email shortly regarding the next meeting time.</h2>
+                </div>
             </div>
         </div>
         <div id="particles-js" style="background-image: url(" "); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; z-index: -100;"></div>
     </section>
     <script src="bower_components/particles.js/particles.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript">
         particlesJS.load('particles-js', 'particlesjs-config.json', function () {
             console.log('callback - particles.js config loaded');
+        });
+    </script>
+    <script>
+        $('#submit').click(function () {
+            $('#signup').fadeOut();
+            $('#particles-js').fadeOut();
+            $('#signup').promise().done(function () {
+                $('#confirmation').removeClass('is-hidden');
+                $('#confirmation').toggleClass('animated fadeIn');
+            });
+
+            setTimeout(
+                function () {
+                    $('.circle-loader').toggleClass('load-complete');
+                    $('.checkmark').toggle();
+                    $('#message').removeClass('is-hidden');
+                    $('#message').toggleClass('animated fadeIn');
+                }, 3000);
         });
     </script>
 </body>
