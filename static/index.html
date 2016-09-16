@@ -1,19 +1,38 @@
 <!-- index.html -->
 
 <!DOCTYPE html>
-    <link href="css/stylesheet.css" rel="stylesheet" type="text/css"/>
-    <head>
-        <title> Join Demons! </title>
-    </head>
-    <body>
-        <h1> Sign Up </h1>
-        <p> Please enter your name below and click submit!</p>
-    </body>
-    <form action="register" method="post">
-        Name: <input type="text" name="name" />
-        <button type="submit">Submit</button>
-    </form>
 
+<head>
+    <title>Join Demons!</title>
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="bower_components/bulma/css/bulma.css" tyle="text/css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
 
+</head>
+
+<body>
+    <section class="hero is-primary is-fullheight" style="position: relative;">
+        <div class="hero-body" style="width: 100%;height: 100%;position: absolute; top: 0;
+  left: 0; pointer-events: none;">
+            <div class="container content is-large">
+                <h1 class="title" style="font-weight: 700; margin-bottom: 0px;">DEMONs Sign Up</h1>
+                <h2 class="subtitle" style="margin-top: 10px; margin-bottom: 30px">Please enter your full name below and click submit!</h2>
+                <form class="control" action="register" method="post">
+                    <span style="font-size: 30px; color: rgba(255, 255, 255, 0.7);">Name:</span>
+                    <input class="input is-primary is-large" style="pointer-events: auto; width:300px; box-shadow:none; border-radius: 8px;" type="text" name="first last" />
+                    <button class="button is-large is-success" style="pointer-events: auto; border-radius: 8px; margin-left: 10px;" type="submit">Submit<span class="fa fa-check-circle" style="margin-left: .3em"></span></button>
+                </form>
+            </div>
+        </div>
+        <div id="particles-js" style="background-image: url(" "); background-color: rgb(255, 255, 255); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat; z-index: -100;"></div>
+    </section>
+    <script src="bower_components/particles.js/particles.min.js"></script>
+    <script type="text/javascript">
+        particlesJS.load('particles-js', 'particlesjs-config.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+</body>
 
 </html>
