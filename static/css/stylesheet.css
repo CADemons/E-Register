@@ -35,7 +35,7 @@
 
 .load-complete {
   animation: none;
-  border-color: #5cb85c;
+  border-color: #94d76b;
   transition: border 500ms ease-out;
 }
 
@@ -53,8 +53,8 @@
   height: 4em;
   width: 2em;
   transform-origin: left top;
-  border-right: 2px solid #5cb85c;
-  border-top: 2px solid #5cb85c;
+  border-right: 2px solid #94d76b;
+  border-top: 2px solid #94d76b;
   content: '';
   left: 2em;
   top: 4em;
