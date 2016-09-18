@@ -14,7 +14,5 @@ Then navigate to the E-Register Folder, and do `npm install`
 
 After modifying index.html / adding files, to run the app, `node lib/index.js` 
 
-The local page will be running at localhost:3000
+The local page will be running at `localhost:3000`
 
-Note: I've decided to not use Heroku (because of client secret complications),
-but I'll bring my computer to use for the sign in.
