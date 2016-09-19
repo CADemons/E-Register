@@ -6,6 +6,11 @@ To contribute, it's suggested to fork the repository and make pull requests
 (during the 2016-2017 school year), however, after that simple cloning will do. 
 
 ## Getting Started
+### Install via NPM 
+[![NPM](https://nodei.co/npm/Fruma.png)](https://nodei.co/npm/eregister/)
+`npm install eregister`
+
+
 ### Cloning a Forked Repository
 First, fork the repository on the homepage of this project (upper right hand
 corner). 
@@ -14,17 +19,11 @@ Then navigate to your "fork" under your repositories, and via command line
 type:
 `git clone https://github.com/<YOURGITHUBUSERNAME>/E-Register.git`
 
-After it has successfully cloned, navigate to your local E-Register folder, and
-type: `npm install`. 
-
-After modifying index.html / adding files, to run the app, `node lib/index.js`.
-
-The local page will be running at `localhost:3000`.
-
 ### Cloning The Organization's Repository
 First clone the repository via command line using: `git clone
 https://github.com/CADemons/E-Register.git`.
 
+### Final Installation / Running
 Then navigate to the E-Register Folder, and do `npm install`. 
 
 After modifying index.html / adding files, to run the app, `node lib/index.js`.
