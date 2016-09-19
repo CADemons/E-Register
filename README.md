@@ -7,7 +7,8 @@ To contribute, it's suggested to fork the repository and make pull requests
 
 ## Getting Started
 ### Install via NPM 
-[![NPM](https://nodei.co/npm/Fruma.png)](https://nodei.co/npm/eregister/)
+[![NPM](https://nodei.co/npm/eregister.png)](https://nodei.co/npm/eregister/)
+
 `npm install eregister`
 
 
