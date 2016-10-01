@@ -60,7 +60,12 @@ writing/accessing the spreadsheet). **Make sure that the client_email has write
 permissions.**
 
 Now in your spreadsheet (**this step is important**), cells **A1** and **B1**
-must be labeled: `Name` and `Email` respectively. 
+must be labeled: `Name` and `Email` respectively.
+
+Finally, you must add the spreadsheet id to the `spreadsheetid.json` file under
+the field `id`. Your spreadsheet id is the number located in the spreadsheet
+url.
+Here's explicitly where to find it: `https://docs.google.com/spreadsheets/d/<id>/edit#gid=0`
 
 After that, you're all set! You'll be able to run E-Register (through `node
 lib/index.js`), and add names to a spreadsheet. E-Register also generates the
